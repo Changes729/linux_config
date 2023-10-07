@@ -1,0 +1,6 @@
+[Bookmarks]
+[Recent]
+!下载
+/home/asuki/Downloads/
+!主目录
+/home/asuki/
