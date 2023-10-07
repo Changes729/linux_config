@@ -1,0 +1,3 @@
+ln -s ${pwd}/home/.* ~/
+ln -s ${pwd} ~
+[ -s ~/.config ] && rm -rf .config && mv linux_config .config

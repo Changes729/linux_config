@@ -2,7 +2,8 @@
 [keybindings]
 [profiles]
   [[default]]
-    background_type = transparent
+    title_transmit_bg_color = "#1a5fb4"
+    title_receive_bg_color = "#99c1f1"
 [layouts]
   [[default]]
     [[[window0]]]

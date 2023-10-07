@@ -16,6 +16,7 @@ font pango:monospace 8
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
+set $mod Mod4
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -41,7 +42,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $mod Mod4
 set $up l
 set $down k
 set $left j
@@ -196,15 +196,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Screen Capture
+bindsym --release Shift+Print exec "scrot -l mode=edge -s -e 'mv $f ~/Downloads"
+bindsym --release Print exec "scrot -e 'mv $f ~/Downloads"
+
 # run rofi
 bindsym $mod+n exec rofi -show run
-
-# Screen Capture
-bindsym --release Shift+Print exec "scrot -l mode=edge -s -e 'mv $f ~/Downloads'"
-bindsym --release Print exec "scrot -e 'mv $f ~/Downloads'"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
@@ -216,8 +213,5 @@ bindsym --release Print exec "scrot -e 'mv $f ~/Downloads'"
 #
 # Please remove the following exec line:
 #######################################################################
-exec i3-config-wizard
-
-# polybar support
 exec_always --no-startup-id polybar
 exec --no-startup-id fcitx5 -d

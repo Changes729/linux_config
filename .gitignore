@@ -1,3 +1,5 @@
+aria2c/
+
 Code - Insiders/
 
 dconf/
@@ -15,7 +17,12 @@ menus/
 
 pulse/
 
+syncthing/
+
 Typora/
 
+vlc/
+
+pavucontrol.ini
 pikaur.conf
 QtProject.conf
